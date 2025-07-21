@@ -4,5 +4,10 @@
   box-sizing: border-box;
 }
 :root{
-  --BODY:#333333;
+  --BODY:#6C584C;
+}
+.formDisplay{
+background-color: var(--BODY);
+height: 100vh;
+width: 100vw;
 }
