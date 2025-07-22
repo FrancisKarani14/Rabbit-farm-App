@@ -12,17 +12,28 @@ function App() {
   const [formData, setFormData]= useState({
     name:'',
     gender:'',
-    served:'',
+    served:'false',
     dateServed:'',
     probableDateOfBirth:''
   })
+
+  // function to handle change of the input fields
+
+  function handleChange(e) {
+    const {name, value, type, checked} = e.target;
+    setFormData((prev)=>({
+      ...prev,
+      [name]:type==='checkbox'?checked:value
+    }))
+    
+  }
   
   return (
     <>
       <Home />
 
       <AnimalList />
-      <RabbitForm formData={formData} />
+      <RabbitForm formData={formData} handleChange={handleChange} />
       
       
     </>
