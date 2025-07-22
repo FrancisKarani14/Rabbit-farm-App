@@ -1,14 +1,13 @@
-import { useState } from 'react'
-import React from 'react' 
-import Home from './pages/Home'
-import AnimalList from './pages/AnimalList'
-import RabbitForm from './pages/RabbitForm'
 
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import AnimalList from './pages/AnimalList';
+import RabbitForm from './pages/RabbitForm';
+import './App.css';
+import { useState } from 'react'
 
 function App() {
-
-  // state variable abstraction
+   // state variable abstraction
   const [formData, setFormData]= useState({
     name:'',
     gender:'',
@@ -27,17 +26,13 @@ function App() {
     }))
     
   }
-  
   return (
-    <>
-      <Home />
-
-      <AnimalList />
-      <RabbitForm formData={formData} handleChange={handleChange} />
-      
-      
-    </>
-  )
-}
-
-export default App
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/rabbits" element={<AnimalList />} />
+        <Route path="/add" element={<RabbitForm formData={formData} handleChange={handleChange}/>} />
+      </Routes>
+    </Router>
+  );
+export default App;

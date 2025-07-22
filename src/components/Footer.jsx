@@ -1,9 +1,13 @@
-import React from 'react'
 
-export default function Footer() {
+import React from 'react';
+
+function Footer() {
   return (
-    <div>
-      {/* <h1>this is a footer</h1> */}
-    </div>
-  )
+    <footer className="footer">
+      <p>© 2025 Rabbit Farm | Designed with ❤️ for Innovation Challenge</p>
+    </footer>
+  );
 }
+
+export default Footer;
+
