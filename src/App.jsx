@@ -1,10 +1,13 @@
 
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Home from './pages/Home';
 import AnimalList from './pages/AnimalList';
 import RabbitForm from './pages/RabbitForm';
 import './App.css';
 import { useState } from 'react'
+
 
 function App() {
    // state variable abstraction
@@ -27,6 +30,9 @@ function App() {
     
   }
   return (
+
+    <>
+
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -34,11 +40,13 @@ function App() {
         {/*  */}
         <Route 
           path="/rabbitform" 
-          element={<RabbitForm formData={formData} handleChange={handleChange}/>}
-      />
-
-          
-      </Routes>
+          element={<RabbitForm formData={formData} handleChange={handleChange}/>}/>
+     </Routes>
     </Router>
   )};
 export default App;
+      
+
+          
+     
+
