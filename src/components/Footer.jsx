@@ -1,3 +1,4 @@
+
 function Footer() {
   return (
      <footer style={{ textAlign: "center", padding: "10px", background: "#eee" }}>
@@ -14,3 +15,6 @@ function Footer() {
 }
 
 export default Footer;
+
+
+
