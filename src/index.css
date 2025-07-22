@@ -4,10 +4,34 @@
   box-sizing: border-box;
 }
 :root{
-  --BODY:#6C584C;
+  --BODY:#8C5E3C;
 }
 .formDisplay{
 background-color: var(--BODY);
 height: 100vh;
 width: 100vw;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
+ form{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 40%;
+
+ }
+  input{
+  font-size: 1rem;
+  padding: 2px;
+  margin: 5px;
+  background-color: #B8B8B8;
+ }
+ button{
+  cursor: pointer;
+  background-color: #4C6B44;
+  font-size: 1rem;
+  padding: 5px;
+ }

@@ -4,7 +4,7 @@ import React from 'react'
 export default function RabbitForm() {
   return (
     <div className='formDisplay' >
-    <h1>Home</h1>
+    <h1>Add Rabbit</h1>
     <form> 
         <label> Rabbit name </label>
         <input 
@@ -17,8 +17,10 @@ export default function RabbitForm() {
         // onChange={c}
         
         />
+        
 
-        <label>Enter the Gender</label>
+        <label>Enter the Gender 
+
         <select id='' 
         // value={gender}
         // onChange={c}
@@ -26,25 +28,30 @@ export default function RabbitForm() {
             <option>Male</option>
             <option>female</option>
         </select>
+        </label>
 
-        <label>Tick if the rabbit is served</label>
+        <label>Tick if the rabbit is served 
+
         <input 
         type='checkbox'
         // checked={checked}
         // onChange={c}
         />
+        </label>
         <label>Date served</label>
         <input
         type='date'
         // value={n}
 
         />
+        
         <label>probable Date of birth</label>
         <input
         type='date'
         // value={n}
 
         />
+        
         <button type='submit'>Add Rabbit</button>
     </form>
       
