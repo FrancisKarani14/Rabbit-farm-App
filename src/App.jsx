@@ -1,22 +1,19 @@
-import { useState } from 'react'
-import Home from './pages/Home'
-import AnimalList from './pages/AnimalList'
-import RabbitForm from './pages/RabbitForm'
-
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import AnimalList from './pages/AnimalList';
+import RabbitForm from './pages/RabbitForm';
+import './App.css';
 
 function App() {
-  
   return (
-    <>
-      <Home />
-      
-      <AnimalList />
-      <RabbitForm />
-      
-      
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/rabbits" element={<AnimalList />} />
+        <Route path="/add" element={<RabbitForm />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
