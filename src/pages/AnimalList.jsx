@@ -3,7 +3,7 @@ import AnimalCard from '../components/AnimalCard'
 
 export default function AnimalList({rabbits}) {
  return (
-    <div>
+    <div className='listDisplay'>
       {rabbits.map((rabbit)=>(
         <AnimalCard key={rabbit.id} rabbit={rabbit} />
       ))}

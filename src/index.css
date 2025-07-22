@@ -310,3 +310,27 @@ form{
   width: 40%;
   padding: 10px;
 }
+.listDisplay{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.658);
+  padding: 20px;
+  height: auto;
+}
+.animalCard{
+  background-color: white;
+  box-shadow: 2px 2px 4px black;
+  width: 300px;
+  height: auto;
+  padding: 10px;
+}
+.deleteBtn{
+  background-color: red;
+  margin-right: 5px;
+}
+.updateBtn{
+  background-color: #32cd32;
+  margin-left: 5px;
+}

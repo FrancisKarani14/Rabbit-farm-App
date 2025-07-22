@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Snowflake",
-      "image": "https://images.unsplash.com/photo-1580408260026-32d66c9d98d0",
+      "image": "https://media.istockphoto.com/id/1683134323/photo/white-brown-baby-bunny-standing-in-the-grass-and-looking-at-the-camera-with-nature-blurred-in.jpg?s=612x612&w=0&k=20&c=2HeLoeXkLnskqSq-SmkGSJDNAkLUssWp380iQYqE0v0=",
       "gender": "female",
       "served": true,
       "dateServed": "2025-07-01",
@@ -14,21 +14,27 @@
       "name": "Thumper",
       "image": "https://images.unsplash.com/photo-1601987077673-48cbee0f051e",
       "gender": "male",
-      "served": false
+      "served": false,
+      "dateServed": "NA",
+      "probableBirthDate": "NA"
     },
     {
       "id": 3,
       "name": "Daisy",
       "image": "https://images.unsplash.com/photo-1612621460727-eec2f317aa56",
       "gender": "female",
-      "served": false
+      "served": false,
+      "dateServed": "NA",
+      "probableBirthDate": "NA"
     },
     {
       "id": 4,
       "name": "Leo",
       "image": "https://images.unsplash.com/photo-1590080876599-dfbb35c5b6b4",
       "gender": "male",
-      "served": false
+      "served": false,
+      "dateServed": "NA",
+      "probableBirthDate": "NA"
     },
     {
       "id": 5,
@@ -44,14 +50,18 @@
       "name": "Oreo",
       "image": "https://images.unsplash.com/photo-1610484827050-06d6e7ed15d5",
       "gender": "male",
-      "served": false
+      "served": false,
+      "dateServed": "NA",
+      "probableBirthDate": "NA"
     },
     {
       "id": 7,
       "name": "Bella",
       "image": "https://images.unsplash.com/photo-1602524815277-1d4c5b6d3f30",
       "gender": "female",
-      "served": false
+      "served": false,
+      "dateServed": "NA",
+      "probableBirthDate": "NA"
     }
   ]
 }
