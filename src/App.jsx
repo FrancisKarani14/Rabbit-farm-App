@@ -54,7 +54,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/rabbits" element={<AnimalList />} />
+        <Route path="/rabbits" element={<AnimalList rabbits={rabbits} />} />
         {/*  */}
         <Route 
           path="/rabbitform" 
