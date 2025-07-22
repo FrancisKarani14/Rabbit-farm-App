@@ -334,3 +334,6 @@ form{
   background-color: #32cd32;
   margin-left: 5px;
 }
+.animalCard img{
+  width: 270px;
+}

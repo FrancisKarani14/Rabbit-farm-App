@@ -12,7 +12,7 @@ import { useState, useEffect } from 'react'
 function App() {
 
   //variable to save the server base url
-  const url = "http://localhost:3000/rabbits" 
+  const url = "https://json-server-7-kr3u.onrender.com/rabbits" 
 
    // state variable abstraction
   const [formData, setFormData]= useState({
