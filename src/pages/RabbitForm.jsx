@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 
 export default function RabbitForm({formData, handleChange}) {
   return (
-    <section>
+    <section className='formPage'>
       <Navbar />
     <div className='formDisplay' >
       
@@ -66,7 +66,9 @@ export default function RabbitForm({formData, handleChange}) {
     </form>
       
     </div>
+    <section className='footer'>
     <Footer />
+    </section>
     </section>
   )
 }
