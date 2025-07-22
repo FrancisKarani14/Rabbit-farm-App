@@ -1,14 +1,10 @@
 import React from 'react'
+import AnimalCard from '../components/AnimalCard'
 
 export default function AnimalList({rabbits}) {
-  // function to create a card for rabbits
-  function createCard() {
-    
-    
-  }
-  return (
+ return (
     <div>
-      
+      <AnimalCard rabbits={rabbits} />
     </div>
   )
 }
