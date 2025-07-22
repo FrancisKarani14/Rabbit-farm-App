@@ -10,7 +10,7 @@ export default function RabbitForm({formData, handleChange}) {
       
     <h1>Add Rabbit</h1>
     <form> 
-        <label> Rabbit name </label>
+        <label> Rabbit name 
         <input 
         id=''
         type='text'
@@ -21,7 +21,7 @@ export default function RabbitForm({formData, handleChange}) {
         onChange={handleChange}
         
         />
-        
+        </label>
 
         <label>Enter the Gender 
 
@@ -35,7 +35,7 @@ export default function RabbitForm({formData, handleChange}) {
         </select>
         </label>
 
-        <label>Tick if the rabbit is served 
+        <label>Tick if the rabbit is served  
 
         <input 
         type='checkbox'
@@ -44,7 +44,8 @@ export default function RabbitForm({formData, handleChange}) {
         onChange={handleChange}
         />
         </label>
-        <label>Date served</label>
+       
+        <label>Date served
         <input
         type='date'
         name='dateServed'
@@ -52,8 +53,9 @@ export default function RabbitForm({formData, handleChange}) {
         onChange={handleChange}
 
         />
+        </label>
         
-        <label>probable Date of birth</label>
+        <label>probable Date of birth
         <input
         type='date'
         name='probableDateOfBirth'
@@ -61,6 +63,7 @@ export default function RabbitForm({formData, handleChange}) {
         value={formData.probableDateOfBirth}
 
         />
+        </label>
         
         <button type='submit'>Add Rabbit</button>
     </form>
