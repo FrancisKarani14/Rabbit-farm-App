@@ -1,12 +1,11 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+
 
 
 export default function RabbitForm({formData, handleChange}) {
   return (
     <div className='formDisplay' >
-      <Navbar />
+      
     <h1>Add Rabbit</h1>
     <form> 
         <label> Rabbit name </label>
@@ -63,7 +62,7 @@ export default function RabbitForm({formData, handleChange}) {
         
         <button type='submit'>Add Rabbit</button>
     </form>
-      <Footer />
+      
     </div>
   )
 }
