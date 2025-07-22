@@ -1,6 +1,6 @@
 function Footer() {
  return (
-    <footer style={{ backgroundColor: "white", padding: "10px", textAlign: "center", fontSize: "14px", color: "black" }}>
+   <footer className="footer">
       <p><strong>Rabbit Farm Manager</strong> — Track, Monitor & Plan Your Farm</p>
       <p>
         <a href="#dashboard" style={linkStyle}>Dashboard</a>|
