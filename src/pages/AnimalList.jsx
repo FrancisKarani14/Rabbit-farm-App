@@ -4,7 +4,9 @@ import AnimalCard from '../components/AnimalCard'
 export default function AnimalList({rabbits}) {
  return (
     <div>
-      <AnimalCard rabbits={rabbits} />
+      {rabbits.map((rabbit)=>{
+        <AnimalCard key={rabbit.id} rabbit={rabbit} />
+      })}
     </div>
   )
 }
