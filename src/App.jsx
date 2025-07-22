@@ -18,6 +18,7 @@ function App() {
   })
 
   // function to handle change of the input fields
+  // It is an abstraction of all the functions that could have been created
 
   function handleChange(e) {
     const {name, value, type, checked} = e.target;
@@ -27,6 +28,9 @@ function App() {
     }))
     
   }
+
+  // Function to handle submit
+  
   
   return (
     <>
