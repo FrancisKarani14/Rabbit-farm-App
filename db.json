@@ -1,51 +1,57 @@
 {
-    "rabbits":[
-  {
-    "id": 1,
-    "name": "Snowflake",
-    "gender": "female",
-    "served": true,
-    "dateServed": "2025-07-01",
-    "probableBirthDate": "2025-07-31"
-  },
-  {
-    "id": 2,
-    "name": "Thumper",
-    "gender": "male",
-    "served": false
-  },
-  {
-    "id": 3,
-    "name": "Daisy",
-    "gender": "female",
-    "served": false
-  },
-  {
-    "id": 4,
-    "name": "Leo",
-    "gender": "male",
-    "served": false
-  },
-  {
-    "id": 5,
-    "name": "Luna",
-    "gender": "female",
-    "served": true,
-    "dateServed": "2025-07-10",
-    "probableBirthDate": "2025-08-09"
-  },
-  {
-    "id": 6,
-    "name": "Oreo",
-    "gender": "male",
-    "served": false
-  },
-  {
-    "id": 7,
-    "name": "Bella",
-    "gender": "female",
-    "served": false
-  }
-]
-
+  "rabbits": [
+    {
+      "id": 1,
+      "name": "Snowflake",
+      "image": "https://images.unsplash.com/photo-1580408260026-32d66c9d98d0",
+      "gender": "female",
+      "served": true,
+      "dateServed": "2025-07-01",
+      "probableBirthDate": "2025-07-31"
+    },
+    {
+      "id": 2,
+      "name": "Thumper",
+      "image": "https://images.unsplash.com/photo-1601987077673-48cbee0f051e",
+      "gender": "male",
+      "served": false
+    },
+    {
+      "id": 3,
+      "name": "Daisy",
+      "image": "https://images.unsplash.com/photo-1612621460727-eec2f317aa56",
+      "gender": "female",
+      "served": false
+    },
+    {
+      "id": 4,
+      "name": "Leo",
+      "image": "https://images.unsplash.com/photo-1590080876599-dfbb35c5b6b4",
+      "gender": "male",
+      "served": false
+    },
+    {
+      "id": 5,
+      "name": "Luna",
+      "image": "https://images.unsplash.com/photo-1602624432972-306a04a02a37",
+      "gender": "female",
+      "served": true,
+      "dateServed": "2025-07-10",
+      "probableBirthDate": "2025-08-09"
+    },
+    {
+      "id": 6,
+      "name": "Oreo",
+      "image": "https://images.unsplash.com/photo-1610484827050-06d6e7ed15d5",
+      "gender": "male",
+      "served": false
+    },
+    {
+      "id": 7,
+      "name": "Bella",
+      "image": "https://images.unsplash.com/photo-1602524815277-1d4c5b6d3f30",
+      "gender": "female",
+      "served": false
+    }
+  ]
 }
