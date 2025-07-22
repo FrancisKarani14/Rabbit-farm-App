@@ -58,9 +58,9 @@ export default function RabbitForm({formData, handleChange}) {
         <label>probable Date of birth</label>
         <input
         type='date'
-        name='probableDateOfBirth'
+        name='probableBirthDate'
         onChange={handleChange}
-        value={formData.probableDateOfBirth}
+        value={formData.probableBirthDate}
        
 
         />

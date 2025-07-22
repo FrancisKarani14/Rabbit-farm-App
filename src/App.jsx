@@ -12,15 +12,15 @@ import { useState, useEffect } from 'react'
 function App() {
 
   //variable to save the server base url
-  const url = " http://localhost:3000/rabbits" 
+  const url = "http://localhost:3000/rabbits" 
 
    // state variable abstraction
   const [formData, setFormData]= useState({
     name:'',
     gender:'',
-    served:'false',
+    served:false,
     dateServed:'',
-    probableDateOfBirth:''
+    probableBirthDate:''
   })
   // a state variable for the animals, to record the changes in the number and the details
   const[rabbits, setRabbits] = useState([])
@@ -54,7 +54,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/rabbits" element={<AnimalList rabbits={rabbits} />} />
+        <Route path="/animallist" element={<AnimalList rabbits={rabbits} />} />
+
         {/*  */}
         <Route 
           path="/rabbitform" 

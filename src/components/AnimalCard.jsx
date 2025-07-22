@@ -5,8 +5,8 @@ export default function AnimalCard({rabbit}) {
     <div className='animalCard'>
         <h2> <strong>Name:</strong> {rabbit.name} </h2>
         <img 
-        src='{rabbit.image} '
-        alt='{rabbit.name} '
+        src={rabbit.image} 
+        alt={rabbit.name}
 
         />
         <p><strong>Gender:</strong> {rabbit.gender} </p>
