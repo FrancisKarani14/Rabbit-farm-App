@@ -8,9 +8,9 @@ export default function RabbitForm({formData, handleChange}) {
       <Navbar />
     <div className='formDisplay' >
       
-    <h1>Add Rabbit</h1>
+    <h1>Add a Rabbit</h1>
     <form> 
-        <label> Rabbit name 
+        <label> Rabbit name </label>
         <input 
         id=''
         type='text'
@@ -21,7 +21,7 @@ export default function RabbitForm({formData, handleChange}) {
         onChange={handleChange}
         
         />
-        </label>
+        
 
         <label>Enter the Gender 
 
@@ -45,7 +45,7 @@ export default function RabbitForm({formData, handleChange}) {
         />
         </label>
        
-        <label>Date served
+        <label>Date served</label>
         <input
         type='date'
         name='dateServed'
@@ -53,17 +53,18 @@ export default function RabbitForm({formData, handleChange}) {
         onChange={handleChange}
 
         />
-        </label>
         
-        <label>probable Date of birth
+        
+        <label>probable Date of birth</label>
         <input
         type='date'
         name='probableDateOfBirth'
         onChange={handleChange}
         value={formData.probableDateOfBirth}
+       
 
         />
-        </label>
+        
         
         <button type='submit'>Add Rabbit</button>
     </form>
