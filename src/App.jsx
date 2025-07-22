@@ -31,8 +31,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/rabbits" element={<AnimalList />} />
-        <Route path="/add" element={<RabbitForm formData={formData} handleChange={handleChange}/>} />
+        {/*  */}
+        <Route 
+          path="/rabbitform" 
+          element={<RabbitForm formData={formData} handleChange={handleChange}/>}
+      />
+
+          
       </Routes>
     </Router>
-  );
+  )};
 export default App;

@@ -5,7 +5,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
   text-align: center;
-  background: linear-gradient(rgba(97, 96, 96, 0.85), rgba(202, 190, 190, 0.85)),
+  background: 
               url('../src/assets/images/background.jpg') no-repeat center center fixed;
   background-size: cover;
 }
@@ -260,11 +260,9 @@ body {
   padding: 0%;
   box-sizing: border-box;
 }
-:root{
-  --BODY:#8C5E3C;
-}
+
 .formDisplay{
-background-color: var(--BODY);
+
 height: 100vh;
 width: 100vw;
 display: flex;

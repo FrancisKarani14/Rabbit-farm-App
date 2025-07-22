@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { NavLink, Link } from 'react-router-dom';
 
 // Import all rabbit images from the assets/images folder
 const imageImports = import.meta.glob('../assets/images/*.jpg', { eager: true });
@@ -38,7 +39,10 @@ const Landing = () => {
       <section className="welcome-banner" data-aos="fade-down">
         <h1>🐇 Welcome to Rabbit Farm</h1>
         <p>Your trusted hub for tracking, managing, and expanding rabbit colonies</p>
-        <a href="/rabbitform" className="cta-btn">Add Your First Rabbit</a>
+
+      <NavLink to="/rabbitform" className="cta-btn">
+       Add Your First Rabbit
+      </NavLink>
       </section>
 
       <section className="highlight" data-aos="fade-up">
@@ -69,7 +73,7 @@ const Landing = () => {
         <h2>💬 Farmer’s Feedback</h2>
         <blockquote>
           “This system made tracking my rabbits effortless. I’ve increased productivity by 40%!”
-          <footer>— Felister Derrick and Karan.</footer>
+          <footer>— Felister Derrick and Karani.</footer>
         </blockquote>
       </section>
     </div>
