@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export default function RabbitForm() {
+export default function RabbitForm({formData}) {
   return (
     <div className='formDisplay' >
     <h1>Add Rabbit</h1>
@@ -10,9 +10,9 @@ export default function RabbitForm() {
         <input 
         id=''
         type='text'
-        name=''
+        name='name'
         placeholder='Enter Rabbit name'
-        // value={name}
+        value={formData.name}
         required
         // onChange={c}
         
@@ -22,7 +22,8 @@ export default function RabbitForm() {
         <label>Enter the Gender 
 
         <select id='' 
-        // value={gender}
+        name='gender'
+        value={formData.gender}
         // onChange={c}
         >
             <option>Male</option>
@@ -34,21 +35,22 @@ export default function RabbitForm() {
 
         <input 
         type='checkbox'
-        // checked={checked}
+        name='checkbox'
+        checked={formData.checked}
         // onChange={c}
         />
         </label>
         <label>Date served</label>
         <input
         type='date'
-        // value={n}
+        value={formData.dateServed}
 
         />
         
         <label>probable Date of birth</label>
         <input
         type='date'
-        // value={n}
+        value={formData.probableDateOfBirth}
 
         />
         

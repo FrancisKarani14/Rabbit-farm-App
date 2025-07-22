@@ -22,7 +22,7 @@ function App() {
       <Home />
 
       <AnimalList />
-      <RabbitForm />
+      <RabbitForm formData={formData} />
       
       
     </>
