@@ -318,6 +318,7 @@ form{
   background-color: rgba(255, 255, 255, 0.658);
   padding: 20px;
   height: auto;
+  justify-content: center;
 }
 .animalCard{
   background-color: white;
