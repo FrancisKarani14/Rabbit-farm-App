@@ -38,5 +38,16 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: #b1afaf;
+}
+.footer {
+  background-color: rgb(216, 215, 215);
+  padding: 10px;
+  text-align: center;
+}
+
+.footer p {
+  color: rgb(19, 6, 6);
+  margin: 0;
+  font-size: 14px;
 }

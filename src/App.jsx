@@ -1,12 +1,20 @@
 
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 import Home from './pages/Home';
 import AnimalList from './pages/AnimalList';
 import RabbitForm from './pages/RabbitForm';
 import './App.css';
+
 import { useState, useEffect } from 'react'
+
+import { useState } from 'react'
+import Signup from './pages/Signup';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import Footer from './components/Footer.jsx';
+import Login from "./pages/Loginpage";
+
+
 
 
 function App() {
@@ -66,12 +74,12 @@ function App() {
     
   }
   return (
-
-    <>
-
+         <>
     <Router>
+ 
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path="/animallist" element={<AnimalList rabbits={rabbits} />} />
 
         {/*  */}
@@ -79,12 +87,29 @@ function App() {
           path="/rabbitform" 
           element={<RabbitForm formData={formData} handleChange={handleChange} handleSubmit={handleSubmit} />}/>
      </Routes>
+
+        <Route path="/animallist" element={<AnimalList />} />
+        <Route 
+          path="/rabbitform" 
+          element={<RabbitForm formData={formData} handleChange={handleChange}/>}
+        />
+        <Route path="/login" element={<Login />} />
+
+      </Routes>
+      <Footer />
+
     </Router>
     </>
-  )};
-export default App;
-      
+  );
+}
 
+export default App;
+
+
+   
+
+ 
           
      
+
 
