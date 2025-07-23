@@ -1,13 +1,16 @@
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import AnimalList from './pages/AnimalList';
 import RabbitForm from './pages/RabbitForm';
 import './App.css';
 import { useState } from 'react'
+
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Footer from './components/Footer.jsx';
 import Login from "./pages/Loginpage";
+
 
 
 function App() {
@@ -31,6 +34,7 @@ function App() {
     
   }
   return (
+         <>
     <Router>
       <div>
         <a href="https://vite.dev" target="_blank">
@@ -48,7 +52,6 @@ function App() {
           path="/rabbitform" 
           element={<RabbitForm formData={formData} handleChange={handleChange}/>}
         />
-        <Route path="/animallist" element={<AnimalList />} />
         <Route path="/login" element={<Login />} />
 
       </Routes>
@@ -58,3 +61,26 @@ function App() {
 }
 
 export default App;
+
+
+   
+
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/rabbits" element={<AnimalList />} />
+        {/*  */}
+        <Route 
+          path="/rabbitform" 
+          element={<RabbitForm formData={formData} handleChange={handleChange}/>}/>
+     </Routes>
+    </Router>
+    </>
+  )};
+export default App;
+      
+
+          
+     
+
+

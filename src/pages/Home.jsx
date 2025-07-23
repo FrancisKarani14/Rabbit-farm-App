@@ -1,11 +1,22 @@
 
+
+
+
+import React from 'react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import Landing from '../components/Landing';
+
+
 function Home() {
   return (
-    <div>
-      <h2>Welcome to the Rabbit Farm App</h2>
-      <p>Select a feature from the navigation or start by logging in.</p>
-    </div>
+    <>
+      <Navbar />
+      <Landing />
+      <Footer />
+    </>
   );
 }
 
 export default Home;
+
