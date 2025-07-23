@@ -7,7 +7,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Footer from './components/Footer.jsx';
-import Login from './pages/Login';
+import Login from "./pages/Loginpage";
+
 
 function App() {
    // state variable abstraction
@@ -42,12 +43,14 @@ function App() {
       <h1>Vite + React</h1>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/rabbits" element={<AnimalList />} />
+        <Route path="/animallist" element={<AnimalList />} />
         <Route 
           path="/rabbitform" 
           element={<RabbitForm formData={formData} handleChange={handleChange}/>}
         />
+        <Route path="/animallist" element={<AnimalList />} />
         <Route path="/login" element={<Login />} />
+
       </Routes>
       <Footer />
     </Router>
