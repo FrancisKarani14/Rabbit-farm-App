@@ -19,7 +19,7 @@ function Navbar() {
         <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`}>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link to="/" className="nav-link text-white" onClick={() => setIsOpen(false)}>Home</Link>
+              <Link to="/home" className="nav-link text-white" onClick={() => setIsOpen(false)}>Home</Link>
             </li>
             <li className="nav-item">
               <Link to="/animallist" className="nav-link text-white" onClick={() => setIsOpen(false)}>Animal List</Link>

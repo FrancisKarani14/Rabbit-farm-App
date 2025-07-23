@@ -5,11 +5,12 @@ import AnimalList from './pages/AnimalList';
 import RabbitForm from './pages/RabbitForm';
 import './App.css';
 import { useState } from 'react'
-import Signup from './pages/Signup';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Footer from './components/Footer.jsx';
 import Login from "./pages/Loginpage";
+import Signup from './pages/Signup.jsx';
+
 
 
 
@@ -45,9 +46,10 @@ function App() {
           element={<RabbitForm formData={formData} handleChange={handleChange}/>}
         />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
 
       </Routes>
-      <Footer />
+    
     </Router>
     </>
   );

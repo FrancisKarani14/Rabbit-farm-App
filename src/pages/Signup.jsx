@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-function Signup() {
-  const [formData, setFormData] = useState({
+
+
+
+const Signup = () => {
+     const [formData, setFormData] = useState({
     username: '',
     email: '',
     password: ''
@@ -16,10 +19,11 @@ function Signup() {
     });
   };
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch('https://jsonplaceholder.typicode.com/users', { // Replace with your real backend
+    fetch('http://localhost:3000/users', { // Replace with your real backend
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -35,8 +39,10 @@ function Signup() {
       console.error('Signup error:', err);
     });
   };
-
+ 
   return (
+    <>
+   
     <div className="page-wrapper">
       <Navbar />
       <main className="signup-container">
@@ -70,13 +76,20 @@ function Signup() {
             onChange={handleChange} 
             required 
           />
+          <br/>
 
-          <button type="submit">Sign Up</button>
+          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type='submit' class="btn btn-warning">Signup</button>
+          
+          </div>
         </form>
       </main>
       <Footer />
     </div>
-  );
+   
+     </>
+      
+  )
 }
 
 export default Signup;

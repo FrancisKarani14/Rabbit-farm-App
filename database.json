@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "name": "Felister",
+      "email": "fellykiragu@gmail.com",
+      "passord": "1234",
+      "id": "7774"
+    },
+    {
+      "id": "f8af",
+      "username": "FellyK",
+      "email": "kiragufelister18@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "6f4c",
+      "username": "nyambura",
+      "email": "nyambura@gmail.com",
+      "password": "2323"
+    }
+  ]
+}

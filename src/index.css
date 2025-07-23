@@ -457,19 +457,23 @@ align-items: center;
 
 .form-label {
   text-align: left;
-  font-weight: bold;
-  margin: 30%;
-  padding: 2%;
-  font-size: 15px;
+  font-weight: lighter;
+  margin: 10px 0;         
+  padding-right: 90px;
+  font-size: 18px;
   color: #333;
+  display: block;         
+  width: 100%;          
+  margin-left: 0;        
 }
+
 
 .form-input {
   
-  padding: 10%;
+  padding: 3%;
   font-size: 16px;
-  border: 20% solid #ccc;
-  border-radius: 20%;
+  border: 5%;
+ border-radius: 5%;
   outline: none;
   transition: border 0.2s ease-in-out;
 }
@@ -479,3 +483,11 @@ align-items: center;
   box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
 }
 
+.btn-group{
+  margin: 3%;
+  border-radius: 15px;
+  padding-right: 50px;
+  padding-left: 50px;
+
+
+}
