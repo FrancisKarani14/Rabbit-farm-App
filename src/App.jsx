@@ -17,6 +17,7 @@ function App() {
    // state variable abstraction
   const [formData, setFormData]= useState({
     name:'',
+    image:'',
     gender:'',
     served:false,
     dateServed:'',
@@ -53,7 +54,7 @@ function App() {
     fetch(url,{
       method:"POST",
       headers:{
-        "content-type":"application-json",
+        "Content-Type":"application-json",
       },
       body:JSON.stringify(formData)
      })
@@ -61,7 +62,7 @@ function App() {
       .then(newRabbit=>{
         setRabbits(prev=> [...prev, newRabbit])
       })
-
+.catch((err) => console.error("Post Error:", err));
     
   }
   return (

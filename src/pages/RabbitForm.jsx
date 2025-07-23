@@ -21,7 +21,13 @@ export default function RabbitForm({formData, handleChange, handleSubmit}) {
         onChange={handleChange}
         
         />
-        
+        <label>Add image url</label>
+        <input 
+        type="text"
+        name='image'
+        value={formData.image}
+        onChange={handleChange}
+        />
 
         <label>Enter the Gender 
 
@@ -39,8 +45,8 @@ export default function RabbitForm({formData, handleChange, handleSubmit}) {
 
         <input 
         type='checkbox'
-        name='checkbox'
-        checked={formData.checked}
+        name='served'
+        checked={formData.served}
         onChange={handleChange}
         />
         </label>
