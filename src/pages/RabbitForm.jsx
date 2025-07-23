@@ -12,6 +12,7 @@ export default function RabbitForm({formData, handleChange}) {
       <Navbar/>
      
     <div className='formDisplay' >
+      <Navbar />
     <h1>Add Rabbit</h1>
     <form> 
         <label> Rabbit name </label>
@@ -68,7 +69,7 @@ export default function RabbitForm({formData, handleChange}) {
         
         <button type='submit'>Add Rabbit</button>
     </form>
-      
+      <Footer />
     </div>
      <Footer/>
     </section>

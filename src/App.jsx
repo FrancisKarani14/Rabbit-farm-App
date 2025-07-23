@@ -9,6 +9,12 @@ import Signup from './pages/Signup';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import Footer from './components/Footer.jsx';
+import Login from "./pages/Loginpage";
+
+
 
 function App() {
    // state variable abstraction
@@ -31,19 +37,32 @@ function App() {
     
   }
   return (
+         <>
     <Router>
+ 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/rabbits" element={<AnimalList />} />
-           <Route path="/signup" element={<Signup />} />
-        {/*  */}
+        <Route path="/animallist" element={<AnimalList />} />
         <Route 
           path="/rabbitform" 
           element={<RabbitForm formData={formData} handleChange={handleChange}/>}
-      />
+        />
+        <Route path="/login" element={<Login />} />
 
-          
       </Routes>
+      <Footer />
     </Router>
-  )};
+    </>
+  );
+}
+
 export default App;
+
+
+   
+
+ 
+          
+     
+
+
