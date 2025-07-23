@@ -7,11 +7,10 @@ import './App.css';
 
 import { useState, useEffect } from 'react'
 
-import { useState } from 'react'
 import Signup from './pages/Signup';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import Footer from './components/Footer.jsx';
+// import Footer from './components/Footer.jsx';
 import Login from "./pages/Loginpage";
 
 
@@ -78,25 +77,19 @@ function App() {
     <Router>
  
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />}/>
 
-        <Route path="/animallist" element={<AnimalList rabbits={rabbits} />} />
+       
 
-        {/*  */}
+        <Route path="/animallist" element={<AnimalList  rabbits={rabbits} />} />
         <Route 
           path="/rabbitform" 
-          element={<RabbitForm formData={formData} handleChange={handleChange} handleSubmit={handleSubmit} />}/>
-     </Routes>
-
-        <Route path="/animallist" element={<AnimalList />} />
-        <Route 
-          path="/rabbitform" 
-          element={<RabbitForm formData={formData} handleChange={handleChange}/>}
+          element={<RabbitForm formData={formData} handleChange={handleChange}handleSubmit={handleSubmit} />}
         />
         <Route path="/login" element={<Login />} />
 
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
 
     </Router>
     </>

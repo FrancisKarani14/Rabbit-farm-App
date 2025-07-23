@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 
 export default function RabbitForm({formData, handleChange, handleSubmit}) {
   return (
-
+    <>
       <Navbar />
     <div className='formDisplay' >
       
@@ -76,6 +76,6 @@ export default function RabbitForm({formData, handleChange, handleSubmit}) {
     </form>
       
     </div>
-
+</>
   )
 }
