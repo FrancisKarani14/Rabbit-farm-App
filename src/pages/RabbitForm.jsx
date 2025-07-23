@@ -4,6 +4,12 @@ import React from 'react'
 
 export default function RabbitForm({formData, handleChange}) {
   return (
+   <>
+   <section>
+
+   
+      <Navbar/>
+     
     <div className='formDisplay' >
       
     <h1>Add Rabbit</h1>
@@ -64,5 +70,8 @@ export default function RabbitForm({formData, handleChange}) {
     </form>
       
     </div>
+     <Footer/>
+    </section>
+       </>
   )
 }
