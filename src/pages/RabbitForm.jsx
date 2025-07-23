@@ -2,14 +2,14 @@ import React from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 
-export default function RabbitForm({formData, handleChange}) {
+export default function RabbitForm({formData, handleChange, handleSubmit}) {
   return (
     <section className='formPage'>
       <Navbar />
     <div className='formDisplay' >
       
     <h1>Add a Rabbit</h1>
-    <form> 
+    <form onSubmit={handleSubmit} > 
         <label> Rabbit name </label>
         <input 
         id=''

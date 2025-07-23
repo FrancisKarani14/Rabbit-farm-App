@@ -47,6 +47,23 @@ function App() {
     }))
     
   }
+  // function to handle submit
+  function handleSubmit(e) {
+    e.preventDefault()
+    fetch(url,{
+      method:"POST",
+      headers:{
+        "content-type":"application-json",
+      },
+      body:JSON.stringify(formData)
+     })
+      .then(res=>res.json())
+      .then(newRabbit=>{
+        setRabbits(prev=> [...prev, newRabbit])
+      })
+
+    
+  }
   return (
 
     <>
@@ -59,7 +76,7 @@ function App() {
         {/*  */}
         <Route 
           path="/rabbitform" 
-          element={<RabbitForm formData={formData} handleChange={handleChange}/>}/>
+          element={<RabbitForm formData={formData} handleChange={handleChange} handleSubmit={handleSubmit} />}/>
      </Routes>
     </Router>
     </>
