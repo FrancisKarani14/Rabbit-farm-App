@@ -586,6 +586,7 @@ body {
 }
 .Card img{
   width: 290px;
+  padding-right: 10px;
 }
 .fell{
    font-family: 'Segoe UI', sans-serif;
