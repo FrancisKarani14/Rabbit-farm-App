@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 
-export default function AnimalCard({ rabbit, onUpdate }) {
+
+
+
+
+
+
+
+export default function AnimalCard({ rabbit, onUpdate, handleDelete }) {
   const [showForm, setShowForm] = useState(false);
   const [editData, setEditData] = useState(rabbit); // initial form data
 
@@ -18,7 +25,7 @@ export default function AnimalCard({ rabbit, onUpdate }) {
     setShowForm(false); // hide form after update
   };
 
-export default function AnimalCard({rabbit, handleDelete}) {
+
 
   return (
     <div className="animalCard">

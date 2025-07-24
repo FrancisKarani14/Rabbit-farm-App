@@ -15,6 +15,7 @@ export default function AnimalList({rabbits , handleDelete}) {
   )}
    <Footer />
 
-
+</>
     
-   
+)
+}

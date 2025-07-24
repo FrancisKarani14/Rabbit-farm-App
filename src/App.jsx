@@ -90,15 +90,6 @@ function handleDelete(id) {
     });
 }
 
-
-
-
-
- 
-
-
-
-  }
   // function to handle update
    
   const handleUpdate = (updatedRabbit) => {
@@ -144,8 +135,18 @@ function handleDelete(id) {
     </>
   );
 }
-
+ 
 export default App;
+
+
+
+
+
+ 
+
+
+
+ 
 
 
 
