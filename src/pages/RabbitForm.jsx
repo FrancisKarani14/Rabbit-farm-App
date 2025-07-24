@@ -1,11 +1,15 @@
 import React from 'react'
+import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 
-
-export default function RabbitForm({formData, handleChange}) {
+export default function RabbitForm({formData, handleChange, handleSubmit}) {
   return (
+    <>
+      <Navbar />
     <div className='formDisplay' >
-    <h1>Add Rabbit</h1>
-    <form> 
+      
+    <h1>Add a Rabbit</h1>
+    <form onSubmit={handleSubmit} className='rabbit-form' > 
         <label> Rabbit name </label>
         <input 
         id=''
@@ -15,9 +19,16 @@ export default function RabbitForm({formData, handleChange}) {
         value={formData.name}
         required
         onChange={handleChange}
+        className='btn-rabbit'
         
         />
-        
+        <label>Add image url</label>
+        <input 
+        type="text"
+        name='image'
+        value={formData.image}
+        onChange={handleChange}
+        />
 
         <label>Enter the Gender 
 
@@ -31,15 +42,16 @@ export default function RabbitForm({formData, handleChange}) {
         </select>
         </label>
 
-        <label>Tick if the rabbit is served 
+        <label>Tick if the rabbit is served  
 
         <input 
         type='checkbox'
-        name='checkbox'
-        checked={formData.checked}
+        name='served'
+        checked={formData.served}
         onChange={handleChange}
         />
         </label>
+       
         <label>Date served</label>
         <input
         type='date'
@@ -49,18 +61,22 @@ export default function RabbitForm({formData, handleChange}) {
 
         />
         
+        
         <label>probable Date of birth</label>
         <input
         type='date'
-        name='probableDateOfBirth'
+        name='probableBirthDate'
         onChange={handleChange}
-        value={formData.probableDateOfBirth}
+        value={formData.probableBirthDate}
+       
 
         />
         
-        <button type='submit'>Add Rabbit</button>
+        
+        <button type='submit' >Add Rabbit</button>
     </form>
       
     </div>
+</>
   )
 }
