@@ -4,18 +4,17 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 
-export default function AnimalList({rabbits, onUpdate}) {
+
+export default function AnimalList({rabbits , handleDelete}) {
  return (
   <>
   <Navbar />
- 
-    <div className='listDisplay'>
-      {rabbits.map((rabbit)=>(
-        <AnimalCard key={rabbit.id} rabbit={rabbit} onUpdate={onUpdate} />
-      ))}
-      
-    </div>
-    <Footer />
-    </>
-  )
-}
+  {rabbits.map((rabbit)=>
+  <AnimalCard key={rabbit.id} rabbit={rabbit} handleDelete={handleDelete}  onUpdate={onUpdate} />
+
+  )}
+   <Footer />
+
+
+    
+   

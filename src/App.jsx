@@ -29,7 +29,7 @@ function App() {
     probableBirthDate:''
   })
   // a state variable for the animals, to record the changes in the number and the details
-  const[rabbits, setRabbits] = useState([])
+  const[rabbits, setRabbits] = useState([]);
 
   // useeffect to fetch the animal lists as the page renders,
   
@@ -42,6 +42,7 @@ function App() {
     
     
   },[])
+
 
   // function to handle change of the input fields
 
@@ -69,6 +70,33 @@ function App() {
       })
 .catch((err) => console.error("Post Error:", err));
 
+    }
+function handleDelete(id) {
+  console.log("Deleting rabbit with id:", id); 
+
+  fetch(`https://json-server-7-kr3u.onrender.com/rabbits/${id}`, {
+    method: "DELETE",
+  })
+    .then(() => {
+      console.log("Deleted on server");
+
+     
+      setRabbits((prevRabbits) =>
+        prevRabbits.filter((rabbit) => rabbit.id !== id)
+      );
+    })
+    .catch((err) => {
+      console.error("Delete error:", err);
+    });
+}
+
+
+
+
+
+ 
+
+
 
   }
   // function to handle update
@@ -90,6 +118,7 @@ function App() {
     });
 };
 
+
   return (
          <>
     <Router>
@@ -97,11 +126,16 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/home" element={<Home />}/>
-        <Route path="/animallist" element={<AnimalList  rabbits={rabbits} onUpdate={handleUpdate} />} />
+
+        <Route path="/animallist" element={<AnimalList  rabbits={rabbits} handleDelete={handleDelete} onUpdate={handleUpdate}/>} />
+        <Route path="/rabbitform" element={<RabbitForm formData={formData} handleChange={handleChange}handleSubmit={handleSubmit}  />} />
+
+       
         <Route 
           path="/rabbitform" 
           element={<RabbitForm formData={formData} handleChange={handleChange}handleSubmit={handleSubmit} />}
         />
+
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         </Routes>
