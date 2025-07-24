@@ -7,7 +7,7 @@ import SearchBar from '../components/SearchBar'
 
 
 
-export default function AnimalList({rabbits}) {
+export default function AnimalList({rabbits, handleDelete, onUpdate}) {
 const [searchRabbit, setSearchRabbit]=useState('')
 
 const filteredRabbits = rabbits.filter((rabbit) => {

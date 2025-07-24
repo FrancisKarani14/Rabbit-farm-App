@@ -1,3 +1,15 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import AnimalList from './pages/AnimalList';
+import { useState, useEffect } from 'react';
+import RabbitForm from './pages/RabbitForm';
+import './App.css';
+
+import Signup from './pages/Signup';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+import Login from "./pages/Loginpage";
 function App() {
   const url = "https://json-server-7-kr3u.onrender.com/rabbits";
 
@@ -95,3 +107,4 @@ function App() {
     </Router>
   );
 }
+export default App;
