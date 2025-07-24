@@ -19,6 +19,7 @@ export default function RabbitForm({formData, handleChange, handleSubmit}) {
         value={formData.name}
         required
         onChange={handleChange}
+        className='btn-rabbit'
         
         />
         <label>Add image url</label>
@@ -72,7 +73,7 @@ export default function RabbitForm({formData, handleChange, handleSubmit}) {
         />
         
         
-        <button type='submit'>Add Rabbit</button>
+        <button type='submit' >Add Rabbit</button>
     </form>
       
     </div>

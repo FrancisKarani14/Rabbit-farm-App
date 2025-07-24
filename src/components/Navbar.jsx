@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import SearchBar from './SearchBar';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,6 +9,8 @@ function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
+    <>
+ 
     <nav className="navbar navbar-expand-lg bg-success text-white px-3" style={{ backgroundColor:'palegreen', padding: "10px"}} >
       <div className="container-fluid"  >
         <h1 className="navbar-brand text-white">🐇 Rabbit Farm</h1>
@@ -24,20 +27,10 @@ function Navbar() {
             <li className="nav-item">
               <Link to="/animallist" className="nav-link text-white" onClick={() => setIsOpen(false)}>Animal List</Link>
             </li>
+            <SearchBar/>
 
             {/* 🔽 Bootstrap Dropdown */}
-            <li className="nav-item dropdown">
-              <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Options
-              </button>
-              <ul className="dropdown-menu dropdown-menu-dark">
-                <li><a className="dropdown-item active" href="#">Action</a></li>
-                <li><a className="dropdown-item" href="#">Another action</a></li>
-                <li><a className="dropdown-item" href="#">Something else here</a></li>
-                <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href="#">Separated link</a></li>
-              </ul>
-            </li>
+        
           </ul>
 
           <div className="d-flex gap-2">
@@ -47,6 +40,7 @@ function Navbar() {
         </div>
       </div>
     </nav>
+      </>
   );
 }
 

@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
 
-
-
-
-
-
-
-
 export default function AnimalCard({ rabbit, onUpdate, handleDelete }) {
   const [showForm, setShowForm] = useState(false);
   const [editData, setEditData] = useState(rabbit); // initial form data
@@ -28,7 +21,8 @@ export default function AnimalCard({ rabbit, onUpdate, handleDelete }) {
 
 
   return (
-    <div className="animalCard">
+    <div className="animalcard-wrapper">
+      <div className="Card">
       <h2>{rabbit.name}</h2>
       <img src={rabbit.image} alt={rabbit.name} />
       <p><strong>Gender:</strong> {rabbit.gender}</p>
@@ -38,16 +32,11 @@ export default function AnimalCard({ rabbit, onUpdate, handleDelete }) {
 
 
         
-        <p><strong>Gender:</strong> {rabbit.gender} </p>
-         <p><strong>Is the rabbit served:</strong> {rabbit.served} </p>
-          <p><strong>Date when the rabbit was served:</strong> {rabbit.dateServed} </p>
-           <p><strong>Probable date of birth:</strong> {rabbit.probableBirthDate} </p>
-          <button onClick={() => handleDelete(rabbit.id)}>remove rabbit</button>
-
-           <button className='updateBtn'>update Rabbit</button>
-
-      <button className="deleteBtn">Remove Rabbit</button>
-      <button className="updateBtn" onClick={() => setShowForm((prev) => !prev)}>
+        
+         
+      <button className="deleteBtn"  style={{backgroundColor:'greenyellow',borderRadius:'20px' }} onClick={() => handleDelete(rabbit.id)}> 
+ Remove Rabbit</button>
+      <button className="updateBtn"  style={{backgroundColor:'greenyellow',borderRadius:'20px' }} onClick={() => setShowForm((prev) => !prev)}>
         {showForm ? 'Cancel Edit' : 'Update Rabbit'}
       </button>
 
@@ -98,7 +87,7 @@ export default function AnimalCard({ rabbit, onUpdate, handleDelete }) {
           />
           <button type="submit">Save Changes</button>
         </form>
-      )}
+      )}</div>
     </div>
   );
 }

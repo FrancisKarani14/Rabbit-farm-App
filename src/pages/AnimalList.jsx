@@ -3,7 +3,7 @@ import { useState } from 'react'
 import AnimalCard from '../components/AnimalCard'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import SearchBar from '../components/SearchBar'
+
 
 
 
@@ -24,14 +24,15 @@ const filteredRabbits = rabbits.filter((rabbit) => {
 
  return (
   <>
+  <div className="fell">
   <Navbar />
-  <SearchBar searchRabbit={searchRabbit} onChange={setSearchRabbit} />
     <div className='listDisplay'>
       {filteredRabbits.map((rabbit)=>(<AnimalCard key={rabbit.id} rabbit={rabbit} handleDelete={handleDelete}  onUpdate={onUpdate} />
       ))}
       
     </div>
     <Footer />
+    </div>
     </>
   )
 }

@@ -11,7 +11,7 @@ export default function SearchBar({searchRabbit, onChange}) {
   placeholder='Search' 
   style={{
      borderRadius: '1rem',
-  padding: '5px'
+    padding:"1px"
   }
     
 
