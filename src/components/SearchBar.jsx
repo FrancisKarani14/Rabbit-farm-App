@@ -1,10 +1,12 @@
 import React from 'react'
 
-export default function SearchBar({rabbits}) {
-    
+export default function SearchBar({searchRabbit}) {
+
   return (
-    <div>
-      
-    </div>
+  <input  
+  type='text'
+  value={searchRabbit}
+  name='searchRabbit'
+  />
   )
 }
