@@ -1,14 +1,13 @@
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home';
 import AnimalList from './pages/AnimalList';
 import RabbitForm from './pages/RabbitForm';
 import './App.css';
-
+import { useState, useEffect } from 'react'
 import Signup from './pages/Signup';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-// import Footer from './components/Footer.jsx';
 import Login from "./pages/Loginpage";
 
 
@@ -28,7 +27,7 @@ function App() {
     probableBirthDate:''
   })
   // a state variable for the animals, to record the changes in the number and the details
-  const[rabbits, setRabbits] = useState([])
+  const [rabbits, setRabbits] = useState([])
 
   // useeffect to fetch the animal lists as the page renders,
   
@@ -67,30 +66,42 @@ function App() {
         setRabbits(prev=> [...prev, newRabbit])
       })
 .catch((err) => console.error("Post Error:", err));
-    
-  }
+
+// function to delete a rabbit
+function handleDelete(id) {
+  fetch(`${url}/${id}`, {
+    method: "DELETE"
+  })
+    .then(() => {
+      setRabbits(prevRabbits => prevRabbits.filter(rabbit => rabbit.id !== id));
+    })
+    .catch(err => console.error("Delete Error:", err));
+}
+
   return (
-         <>
-    <Router>
+         <div>
+      <BrowserRouter>
  
       <Routes>
         <Route path="/" element={<Home />}/>
+         {/* <Route path="/home" element={<Home />}/> */}
 
-       
-
-        <Route path="/animallist" element={<AnimalList  rabbits={rabbits} />} />
+        <Route 
+              path="/animallist" 
+              element={<AnimalList rabbits={rabbits} handleDelete={handleDelete} />} 
+            />
         <Route 
           path="/rabbitform" 
-          element={<RabbitForm formData={formData} handleChange={handleChange}handleSubmit={handleSubmit} />}
-        />
+          element={<RabbitForm formData={formData} handleChange={handleChange} handleSubmit={handleSubmit} />}    />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
 
       </Routes>
-      <Footer />
-    </Router>
-    </>
+     
+      </BrowserRouter>
+    </div>
   );
+}
 }
 
 export default App;

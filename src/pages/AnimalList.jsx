@@ -11,7 +11,16 @@ export default function AnimalList({rabbits}) {
       {rabbits.map((rabbit)=>(
         <AnimalCard key={rabbit.id} rabbit={rabbit} />
       ))}
-      
+    
+            {rabbits.map((rabbit) => (
+        <div key={rabbit.id} className="rabbit-card">
+          <h3>{rabbit.name}</h3>
+          <img src={rabbit.image} alt={rabbit.name} width={100} />
+          <p>Gender: {rabbit.gender}</p>
+          <button onClick={() => handleDelete(rabbit.id)}>Delete</button>
+        </div>
+      ))}
+
     </div>
     <Footer />
     </>
