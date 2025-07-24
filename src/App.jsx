@@ -68,6 +68,14 @@ function App() {
         setRabbits(prev=> [...prev, newRabbit])
       })
 .catch((err) => console.error("Post Error:", err));
+ setFormData({
+        name: '',
+        image: '',
+        gender: '',
+        served: false,
+        dateServed: '',
+        probableBirthDate: ''
+      });
     
   }
   return (

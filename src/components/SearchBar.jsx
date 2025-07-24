@@ -8,6 +8,14 @@ export default function SearchBar({searchRabbit, onChange}) {
   value={searchRabbit}
   name='searchRabbit'
   onChange={(e) => onChange(e.target.value)}
+  placeholder='Search' 
+  style={{
+     borderRadius: '1rem',
+  padding: '5px'
+  }
+    
+
+  }
   />
   )
 }
