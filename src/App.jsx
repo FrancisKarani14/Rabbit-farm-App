@@ -1,13 +1,15 @@
 
-import {Routes, Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import AnimalList from './pages/AnimalList';
+import { useState, useEffect } from 'react';
 import RabbitForm from './pages/RabbitForm';
 import './App.css';
-import { useState, useEffect } from 'react'
+
 import Signup from './pages/Signup';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 import Login from "./pages/Loginpage";
 
 
@@ -27,7 +29,7 @@ function App() {
     probableBirthDate:''
   })
   // a state variable for the animals, to record the changes in the number and the details
-  const [rabbits, setRabbits] = useState([])
+  const[rabbits, setRabbits] = useState([]);
 
   // useeffect to fetch the animal lists as the page renders,
   
@@ -40,6 +42,7 @@ function App() {
     
     
   },[])
+
 
   // function to handle change of the input fields
 
@@ -66,46 +69,57 @@ function App() {
         setRabbits(prev=> [...prev, newRabbit])
       })
 .catch((err) => console.error("Post Error:", err));
-
-// function to delete a rabbit
+    }
 function handleDelete(id) {
-  fetch(`${url}/${id}`, {
-    method: "DELETE"
+  console.log("Deleting rabbit with id:", id); 
+
+  fetch(`https://json-server-7-kr3u.onrender.com/rabbits/${id}`, {
+    method: "DELETE",
   })
     .then(() => {
-      setRabbits(prevRabbits => prevRabbits.filter(rabbit => rabbit.id !== id));
+      console.log("Deleted on server");
+
+     
+      setRabbits((prevRabbits) =>
+        prevRabbits.filter((rabbit) => rabbit.id !== id)
+      );
     })
-    .catch(err => console.error("Delete Error:", err));
+    .catch((err) => {
+      console.error("Delete error:", err);
+    });
 }
 
+
+
+
+
+ 
   return (
-         <div>
-      <BrowserRouter>
+         <>
+    <Router>
  
       <Routes>
         <Route path="/" element={<Home />}/>
-         {/* <Route path="/home" element={<Home />}/> */}
-
-        <Route 
-              path="/animallist" 
-              element={<AnimalList rabbits={rabbits} handleDelete={handleDelete} />} 
-            />
-        <Route 
-          path="/rabbitform" 
-          element={<RabbitForm formData={formData} handleChange={handleChange} handleSubmit={handleSubmit} />}    />
+        <Route path="/home" element={<Home />}/>
+        <Route path="/animallist" element={<AnimalList  rabbits={rabbits} handleDelete={handleDelete} />} />
+        <Route path="/rabbitform" element={<RabbitForm formData={formData} handleChange={handleChange}handleSubmit={handleSubmit}  />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-
-      </Routes>
-     
-      </BrowserRouter>
-    </div>
+        </Routes>
+    
+    </Router>
+    </>
   );
-}
 }
 
 export default App;
 
+
+
+       
+
+        
+      
 
    
 

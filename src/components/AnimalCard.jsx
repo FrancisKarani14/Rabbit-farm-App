@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function AnimalCard({rabbit}) {
+export default function AnimalCard({rabbit, handleDelete}) {
   return (
     <div className='animalCard'>
         <h2>{rabbit.name} </h2>
@@ -13,7 +13,8 @@ export default function AnimalCard({rabbit}) {
          <p><strong>Is the rabbit served:</strong> {rabbit.served} </p>
           <p><strong>Date when the rabbit was served:</strong> {rabbit.dateServed} </p>
            <p><strong>Probable date of birth:</strong> {rabbit.probableBirthDate} </p>
-           <button className='deleteBtn'>Remove Rabbit</button>
+          <button onClick={() => handleDelete(rabbit.id)}>remove rabbit</button>
+
            <button className='updateBtn'>update Rabbit</button>
 
       
