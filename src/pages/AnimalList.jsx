@@ -6,6 +6,7 @@ import Footer from '../components/Footer'
 import SearchBar from '../components/SearchBar'
 
 
+
 export default function AnimalList({rabbits}) {
 const [searchRabbit, setSearchRabbit]=useState('')
 
@@ -26,8 +27,7 @@ const filteredRabbits = rabbits.filter((rabbit) => {
   <Navbar />
   <SearchBar searchRabbit={searchRabbit} onChange={setSearchRabbit} />
     <div className='listDisplay'>
-      {filteredRabbits.map((rabbit)=>(
-        <AnimalCard key={rabbit.id} rabbit={rabbit} />
+      {filteredRabbits.map((rabbit)=>(<AnimalCard key={rabbit.id} rabbit={rabbit} handleDelete={handleDelete}  onUpdate={onUpdate} />>
       ))}
       
     </div>
@@ -35,3 +35,11 @@ const filteredRabbits = rabbits.filter((rabbit) => {
     </>
   )
 }
+
+
+
+
+
+    
+   
+
