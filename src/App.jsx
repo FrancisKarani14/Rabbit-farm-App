@@ -70,6 +70,17 @@ function App() {
       })
 .catch((err) => console.error("Post Error:", err));
 
+ setFormData({
+        name: '',
+        image: '',
+        gender: '',
+        served: false,
+        dateServed: '',
+        probableBirthDate: ''
+      });
+    
+
+
     }
 function handleDelete(id) {
   console.log("Deleting rabbit with id:", id); 
@@ -89,16 +100,7 @@ function handleDelete(id) {
       console.error("Delete error:", err);
     });
 }
-
-
-
-
-
- 
-
-
-
-  }
+   }
   // function to handle update
    
   const handleUpdate = (updatedRabbit) => {
@@ -146,6 +148,16 @@ function handleDelete(id) {
 }
 
 export default App;
+
+
+
+
+
+ 
+
+
+
+ 
 
 
 
