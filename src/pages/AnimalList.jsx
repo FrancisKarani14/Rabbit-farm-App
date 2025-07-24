@@ -3,6 +3,8 @@ import { useState } from 'react'
 import AnimalCard from '../components/AnimalCard'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 
