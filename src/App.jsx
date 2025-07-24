@@ -69,6 +69,7 @@ function App() {
         setRabbits(prev=> [...prev, newRabbit])
       })
 .catch((err) => console.error("Post Error:", err));
+
     }
 function handleDelete(id) {
   console.log("Deleting rabbit with id:", id); 
@@ -94,6 +95,30 @@ function handleDelete(id) {
 
 
  
+
+
+
+  }
+  // function to handle update
+   
+  const handleUpdate = (updatedRabbit) => {
+   fetch(`https://json-server-7-kr3u.onrender.com/rabbits/${updatedRabbit.id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(updatedRabbit),
+  })
+    .then((res) => res.json())
+    .then((newRabbit) => {
+      const updatedList = rabbits.map((rabbit) =>
+        rabbit.id === newRabbit.id ? newRabbit : rabbit
+      );
+      setRabbits(updatedList);
+    });
+};
+
+
   return (
          <>
     <Router>
@@ -101,8 +126,16 @@ function handleDelete(id) {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/home" element={<Home />}/>
-        <Route path="/animallist" element={<AnimalList  rabbits={rabbits} handleDelete={handleDelete} />} />
+
+        <Route path="/animallist" element={<AnimalList  rabbits={rabbits} handleDelete={handleDelete} onUpdate={handleUpdate}/>} />
         <Route path="/rabbitform" element={<RabbitForm formData={formData} handleChange={handleChange}handleSubmit={handleSubmit}  />} />
+
+       
+        <Route 
+          path="/rabbitform" 
+          element={<RabbitForm formData={formData} handleChange={handleChange}handleSubmit={handleSubmit} />}
+        />
+
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         </Routes>
