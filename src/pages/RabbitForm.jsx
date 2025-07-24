@@ -9,7 +9,7 @@ export default function RabbitForm({formData, handleChange, handleSubmit}) {
     <div className='formDisplay' >
       
     <h1>Add a Rabbit</h1>
-    <form onSubmit={handleSubmit} > 
+    <form onSubmit={handleSubmit} className='rabbit-form' > 
         <label> Rabbit name </label>
         <input 
         id=''

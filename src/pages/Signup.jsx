@@ -66,6 +66,7 @@ const Signup = () => {
             value={formData.email} 
             onChange={handleChange} 
             required 
+            
           />
 
           <label>Password</label>
@@ -78,8 +79,8 @@ const Signup = () => {
           />
           <br/>
 
-          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-            <button type='submit' class="btn btn-warning">Signup</button>
+          <div className="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type='submit' className="btn btn-warning">Signup</button>
           
           </div>
         </form>
