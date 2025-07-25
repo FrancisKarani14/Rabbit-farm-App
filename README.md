@@ -29,7 +29,7 @@ A full-stack React application for managing rabbit farm records. Built as a Mori
 
 - Vercel
 
-- Json server
+- JSON server
 
 - Bootstrap
 
