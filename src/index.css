@@ -421,31 +421,143 @@ button{
 }
 
 .Card{
-  width: 300px;
-  box-shadow: 2px 2px 4px black;
-  padding: 10px;
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.Card h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
 }
 
 .Card img{
-  width: 290px;
-  padding-right: 10px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
 }
 
-.fell{
-  font-family: 'Segoe UI', sans-serif;
-  padding: 2rem;
-  background: #fdfdfd;
-  color: #333;
-  justify-content: center;
-  width: 70vw;
+.Card p {
+  margin: 10px 0;
+  color: #555;
+  font-size: 0.95rem;
 }
 
-.listDisplay{
+.Card button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Card button:hover {
+  background-color: #45a049;
+}
+
+.Card .deleteBtn {
+  background-color: #e74c3c;
+}
+
+.Card .deleteBtn:hover {
+  background-color: #c0392b;
+}
+
+/* Page Container - Full Screen Layout */
+.page-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin: 20px;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* List Content - Fills remaining space */
+.list-content {
+  flex: 1;
+  background: #f5f5f5;
+  padding: 40px 20px;
+  overflow-y: auto;
+}
+
+.listDisplay {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.Card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.Card h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.Card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.Card p {
+  margin: 10px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.Card button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Card button:hover {
+  background-color: #45a049;
+}
+
+.Card .deleteBtn {
+  background-color: #e74c3c;
+}
+
+.Card .deleteBtn:hover {
+  background-color: #c0392b;
 }
 
 /* Base styling - default for desktop */
@@ -506,6 +618,11 @@ button{
   .cta-button {
     font-size: 1rem;
     padding: 12px 30px;
+  }
+  
+  .listDisplay {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 
