@@ -25,9 +25,16 @@ function App() {
   const [rabbits, setRabbits] = useState([]);
 
   useEffect(() => {
+    console.log('Fetching rabbits from:', url);
     fetch(url)
-      .then(res => res.json())
-      .then(data => setRabbits(data))
+      .then(res => {
+        console.log('Response status:', res.status);
+        return res.json();
+      })
+      .then(data => {
+        console.log('Rabbits fetched:', data);
+        setRabbits(data);
+      })
       .catch(err => console.error("Fetch Error:", err));
   }, []);
 

@@ -5,6 +5,8 @@ export default function AnimalCard({ rabbit, onUpdate, handleDelete }) {
   const [showForm, setShowForm] = useState(false);
   const [editData, setEditData] = useState(rabbit);
 
+  const isMale = rabbit.gender.toLowerCase() === 'male';
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setEditData((prev) => ({
@@ -36,9 +38,13 @@ export default function AnimalCard({ rabbit, onUpdate, handleDelete }) {
             <img src={rabbit.image} alt={rabbit.name} className="modal-image" />
             <div className="modal-details">
               <p><strong>Gender:</strong> {rabbit.gender}</p>
-              <p><strong>Is the rabbit served:</strong> {rabbit.served ? 'Yes' : 'No'}</p>
-              <p><strong>Date when the rabbit was served:</strong> {rabbit.dateServed}</p>
-              <p><strong>Probable date of birth:</strong> {rabbit.probableBirthDate}</p>
+              {!isMale && (
+                <>
+                  <p><strong>Is the rabbit served:</strong> {rabbit.served ? 'Yes' : 'No'}</p>
+                  <p><strong>Date when the rabbit was served:</strong> {rabbit.dateServed}</p>
+                  <p><strong>Probable date of birth:</strong> {rabbit.probableBirthDate}</p>
+                </>
+              )}
             </div>
 
             <div className="modal-actions">
@@ -76,27 +82,31 @@ export default function AnimalCard({ rabbit, onUpdate, handleDelete }) {
                   onChange={handleChange}
                   placeholder="Gender"
                 />
-                <label>
-                  <input
-                    type="checkbox"
-                    name="served"
-                    checked={editData.served}
-                    onChange={handleChange}
-                  />
-                  Served
-                </label>
-                <input
-                  type="date"
-                  name="dateServed"
-                  value={editData.dateServed}
-                  onChange={handleChange}
-                />
-                <input
-                  type="date"
-                  name="probableBirthDate"
-                  value={editData.probableBirthDate}
-                  onChange={handleChange}
-                />
+                {editData.gender.toLowerCase() !== 'male' && (
+                  <>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="served"
+                        checked={editData.served}
+                        onChange={handleChange}
+                      />
+                      Served
+                    </label>
+                    <input
+                      type="date"
+                      name="dateServed"
+                      value={editData.dateServed}
+                      onChange={handleChange}
+                    />
+                    <input
+                      type="date"
+                      name="probableBirthDate"
+                      value={editData.probableBirthDate}
+                      onChange={handleChange}
+                    />
+                  </>
+                )}
                 <button type="submit">Save Changes</button>
               </form>
             )}
