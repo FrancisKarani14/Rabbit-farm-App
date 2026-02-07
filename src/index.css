@@ -643,6 +643,65 @@ button{
   overflow-y: auto;
 }
 
+.list-controls {
+  max-width: 1400px;
+  margin: 0 auto 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.add-rabbit-btn {
+  padding: 12px 25px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+}
+
+.add-rabbit-btn:hover {
+  background-color: #45a049;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 15px;
+  flex: 1;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.search-input,
+.filter-select {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: white;
+  transition: border-color 0.3s ease;
+}
+
+.search-input {
+  min-width: 250px;
+  flex: 1;
+  max-width: 400px;
+}
+
+.search-input:focus,
+.filter-select:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.filter-select {
+  cursor: pointer;
+}
+
 .listDisplay {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -772,6 +831,19 @@ button{
   .listDisplay {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+  
+  .list-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-controls {
+    flex-direction: column;
+  }
+  
+  .search-input {
+    min-width: 100%;
   }
 }
 
