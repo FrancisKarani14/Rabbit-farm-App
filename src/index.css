@@ -1,8 +1,13 @@
 
 *{
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
 }
 
 body {
@@ -10,23 +15,23 @@ body {
   color: #333;
 }
 
-/* Landing Page Styles */
-.landing-page {
+/* Home Wrapper - Full Screen Layout */
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  background: url('../src/assets/images/background.jpg') no-repeat center center fixed;
+  width: 100%;
+}
+
+/* Landing Page Styles - Fills remaining space */
+.landing-page {
+  flex: 1;
+  background: url('../src/assets/images/background.jpg') no-repeat center center;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
-}
-
-.hero-section {
-  width: 100%;
-  max-width: 800px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .hero-content {
@@ -35,6 +40,8 @@ body {
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  width: 100%;
 }
 
 .hero-content h1 {

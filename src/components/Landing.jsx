@@ -10,14 +10,12 @@ const Landing = () => {
 
   return (
     <div className="landing-page">
-      <div className="hero-section" data-aos="fade-up">
-        <div className="hero-content">
-          <h1>🐇 Welcome to Rabbit Farm Management System</h1>
-          <p>Your trusted hub for tracking, managing, and expanding rabbit colonies</p>
-          <NavLink to="/animallist" className="cta-button">
-            Get Started
-          </NavLink>
-        </div>
+      <div className="hero-content" data-aos="fade-up">
+        <h1>🐇 Welcome to Rabbit Farm Management System</h1>
+        <p>Your trusted hub for tracking, managing, and expanding rabbit colonies</p>
+        <NavLink to="/animallist" className="cta-button">
+          Get Started
+        </NavLink>
       </div>
     </div>
   );
