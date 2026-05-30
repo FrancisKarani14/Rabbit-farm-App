@@ -48,10 +48,17 @@ export default function AnimalList({rabbits, handleDelete, onUpdate}) {
           </div>
         </div>
 
+        <div className="list-header">
+          <h2>Your Rabbits</h2>
+          <p>{filteredRabbits.length} rabbit{filteredRabbits.length !== 1 ? 's' : ''} found</p>
+        </div>
         <div className='listDisplay'>
-          {filteredRabbits.map((rabbit) => (
-            <AnimalCard key={rabbit.id} rabbit={rabbit} handleDelete={handleDelete} onUpdate={onUpdate} />
-          ))}
+          {filteredRabbits.length === 0
+            ? <div className="empty-state"><p>No rabbits match your filters.</p></div>
+            : filteredRabbits.map(rabbit => (
+                <AnimalCard key={rabbit.id} rabbit={rabbit} handleDelete={handleDelete} onUpdate={onUpdate} />
+              ))
+          }
         </div>
       </div>
       <Footer />

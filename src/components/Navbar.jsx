@@ -1,14 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <h1>🐇 Rabbit Farm</h1>
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <h1>🐇 Smart Rabbit</h1>
+        </Link>
       </div>
       <div className="navbar-links">
-        <Link to="/home" className="nav-link">Home</Link>
+        <NavLink to="/home" className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}>Home</NavLink>
+        <NavLink to="/animallist" className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}>My Rabbits</NavLink>
       </div>
       <div className="navbar-buttons">
         <Link to="/login" className="btn-nav">Sign In</Link>

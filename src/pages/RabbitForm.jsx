@@ -1,82 +1,87 @@
-import React from 'react'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
+import React from 'react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
-export default function RabbitForm({formData, handleChange, handleSubmit}) {
+export default function RabbitForm({ formData, handleChange, handleSubmit }) {
   return (
-    <>
+    <div className="page-container">
       <Navbar />
-    <div className='formDisplay' >
-      
-    <h1>Add a Rabbit</h1>
-    <form onSubmit={handleSubmit} className='rabbit-form' > 
-        <label> Rabbit name </label>
-        <input 
-        id=''
-        type='text'
-        name='name'
-        placeholder='Enter Rabbit name'
-        value={formData.name}
-        required
-        onChange={handleChange}
-        className='btn-rabbit'
-        
-        />
-        <label>Add image url</label>
-        <input 
-        type="text"
-        name='image'
-        value={formData.image}
-        onChange={handleChange}
-        />
+      <div className="form-page">
+        <div className="formDisplay">
+          <h1>🐇 Add a Rabbit</h1>
+          <form onSubmit={handleSubmit} className="rabbit-form">
+            <div className="form-group">
+              <label htmlFor="name">Rabbit Name</label>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                placeholder="e.g. Snowball"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
 
-        <label>Enter the Gender 
+            <div className="form-group">
+              <label htmlFor="image">Image URL</label>
+              <input
+                id="image"
+                type="text"
+                name="image"
+                placeholder="https://..."
+                value={formData.image}
+                onChange={handleChange}
+              />
+            </div>
 
-        <select id='' 
-        name='gender'
-        value={formData.gender}
-        onChange={handleChange}
-        >
-            <option>Male</option>
-            <option>female</option>
-        </select>
-        </label>
+            <div className="form-group">
+              <label htmlFor="gender">Gender</label>
+              <select id="gender" name="gender" value={formData.gender} onChange={handleChange}>
+                <option value="">Select gender</option>
+                <option value="Male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
 
-        <label>Tick if the rabbit is served  
+            <div className="form-group checkbox-group">
+              <input
+                type="checkbox"
+                id="served"
+                name="served"
+                checked={formData.served}
+                onChange={handleChange}
+              />
+              <label htmlFor="served">Rabbit has been served</label>
+            </div>
 
-        <input 
-        type='checkbox'
-        name='served'
-        checked={formData.served}
-        onChange={handleChange}
-        />
-        </label>
-       
-        <label>Date served</label>
-        <input
-        type='date'
-        name='dateServed'
-        value={formData.dateServed}
-        onChange={handleChange}
+            <div className="form-group">
+              <label htmlFor="dateServed">Date Served</label>
+              <input
+                id="dateServed"
+                type="date"
+                name="dateServed"
+                value={formData.dateServed}
+                onChange={handleChange}
+              />
+            </div>
 
-        />
-        
-        
-        <label>probable Date of birth</label>
-        <input
-        type='date'
-        name='probableBirthDate'
-        onChange={handleChange}
-        value={formData.probableBirthDate}
-       
+            <div className="form-group">
+              <label htmlFor="probableBirthDate">Probable Birth Date</label>
+              <input
+                id="probableBirthDate"
+                type="date"
+                name="probableBirthDate"
+                value={formData.probableBirthDate}
+                onChange={handleChange}
+              />
+            </div>
 
-        />
-        
-        
-        <button type='submit' >Add Rabbit</button>
-    </form>
-      
+            <button type="submit" className="submit-btn">Add Rabbit</button>
+          </form>
+        </div>
+      </div>
+      <Footer />
     </div>
-</>
-  )
+  );
 }
